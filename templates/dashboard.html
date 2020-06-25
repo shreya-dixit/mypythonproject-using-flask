@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block body %}
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/logo.svf.webp') }}')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>{{params['blog_name']}}</h1>
+              <span class="subheading">{{params['tag_line']}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+        <table class="table">
+    <thead>
+      <tr>
+        <th>sno</th>
+        <th>title</th>
+        <th>date</th>
+         <th>edit</th>
+          <th>delete</th>
+      </tr>
+    </thead>
+    <tbody>
+    <h1><a href="/logout"><button class="btn btn-primary float-right" >Logout</button></a></h1>
+     {% for post in posts %}   
+      <tr>
+        <td>{{post.sno}}</td>
+        <td>{{post.title}}</td>
+        <td>{{post.date}}</td>
+        <td><a href="/edit/{{post.sno}}"><button class="btn btn-primary float-right">edit</button></a></td>
+         <td><a href="/delete/{{post.sno}}"><button class="btn btn-primary float-right" href="/delete/{{post.sno}}">delete</button></a></td>
+        
+      </tr>
+      
+      {% endfor %}
+      <h1>Upload a file</h1>
+    <form action="/uploader" method="post" enctype="multipart/form-data">
+    <input type="file" name="file1">
+    <button type="submit"class="btn btn-primary float-right">Submit</button>
+
+    </tbody>
+  </table>
+
+
+     <!-- Todo: Fetch it using for loop from the database -->
+
+    welcome u r logged in matlab andar ho
+
+          <!-- Pager -->
+          <div class="clearfix">
+            <a class="btn btn-primary float-right" href="#">Older Posts →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}

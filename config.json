@@ -1,0 +1,21 @@
+{
+  "params":
+  {
+    "local_server":"True",
+    "local_uri": "mysql://root:@localhost/codingthunder",
+    "prod_uri":"mysql://root:@localhost/codingthunder",
+    "fb_url":"https://facebook.com/codingthunder",
+    "tw_url":"https://twitter.com/codingthunder",
+    "gh_url": "https://github.com/codingthunder",
+    "blog_name": "HOME PAGE",
+    "tag_line": "Jai SiyaRam Hanumanji",
+    "gmail-user":"myemail@gmail.com",
+    "gmail-password":"password@gmail.com",
+    "about_text": "Hi my name is hari and I create programming tutorials and I am a good girl",
+    "no_of_posts": 2,
+    "login_image":"logo.svf.webp",
+     "admin_user":"harry",
+    "admin_password": "Shrey",
+    "upload_location":"C:\\Users\\Gaurav\\.spyder-py3\\Static"
+    }
+  }
